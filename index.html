@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico HappyAnimals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Zoológico HappyAnimals</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#animais">Animais</a>
+                <a href="#informacoes">Informações</a>
+                <a href="#contato">Contato</a>
+                <a id="loginBtn" href="#">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <!-- Conteúdo principal (carrossel de imagens, informações, etc.) -->
+        <section id="home">
+            <div class="carousel">
+                <!-- Aqui ficaria o carrossel de imagens -->
+                <img src="img/elefante.jpeg" alt="Elefante">
+                <img src="img/macaco.jpg" alt="Macaco">
+                <img src="img/leão.webp" alt="Leão">
+            </div>
+            <div class="info">
+                <h2>Bem-vindo ao Zoológico HappyAnimals!</h2>
+                <p>Descubra a diversidade de animais que habitam nosso zoológico e participe de eventos emocionantes.</p>
+            </div>
+        </section>
+
+        <!-- Botões de animais -->
+        <section id="animal-buttons">
+            <h2>Clique nos animais para ouvir seus sons!</h2>
+            <div class="animal-buttons">
+                <button class="animal-btn" id="elephant-btn"><img src="img/elefante.jpeg" alt="Elefante"></button>
+                <button class="animal-btn" id="giraffe-btn"><img src="img/macaco.jpg" alt="Girafa"></button>
+                <button class="animal-btn" id="lion-btn"><img src="img/leão.webp" alt="Leão"></button>
+                <!-- Adicionar mais botões conforme necessário -->
+            </div>
+        </section>
+
+        <!-- Seção de animais -->
+        <section id="animais">
+            <h2>Nossos Animais</h2>
+            <div class="animal-gallery">
+                <div class="animal-card">
+                    <img src="img/elefante.jpeg" alt="Elefante">
+                    <h3>Elefante</h3>
+                </div>
+                <div class="animal-card">
+                    <img src="img/macaco.jpg" alt="Macaco">
+                    <h3>Macaco</h3>
+                </div>
+                <div class="animal-card">
+                    <img src="img/leão.webp" alt="Leão">
+                    <h3>Leão</h3>
+                </div>
+                <!-- Adicionar mais cards de animais -->
+            </div>
+        </section>
+
+        <!-- Seção de informações -->
+        <section id="informacoes">
+            <h2>Informações Úteis</h2>
+            <div class="info-card">
+                <h3>Horários de Funcionamento</h3>
+                <p>O zoológico está aberto todos os dias da semana, das 9h às 18h.</p>
+            </div>
+            <div class="info-card">
+                <h3>Ingressos</h3>
+                <p>Os ingressos podem ser adquiridos na bilheteria do zoológico ou online. Preços variam conforme a idade e o tipo de visita.</p>
+            </div>
+            <div class="info-card">
+                <h3>Eventos Especiais</h3>
+                <p>Participe de nossos eventos especiais como noites do sono, festas do pijama e oficinas de artesanato.</p>
+            </div>
+            <div class="info-card">
+                <h3>Como Chegar</h3>
+                <p>O zoológico está localizado na Rua dos Animais Felizes, número 123. Consulte o mapa abaixo para obter direções.</p>
+                <div id="map"></div>
+            </div>
+        </section>
+        
+
+        <!-- Seção de contato -->
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Preencha o formulário abaixo para entrar em contato conosco.</p>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm" action="#">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <div id="loginWithGoogle">
+                <button>Entrar com Google</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Zoológico HappyAnimals. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Sons dos animais -->
+    <audio id="elephant-sound" src="sounds/elefante.mp3"></audio>
+    <audio id="macaco-sound" src="sounds/macaco.mp3"></audio>
+    <audio id="lion-sound" src="sounds/leão.mp3"></audio>
+</body>
+</html>
